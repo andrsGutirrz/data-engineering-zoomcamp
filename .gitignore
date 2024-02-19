@@ -206,3 +206,6 @@ terraform.rc
 
 *.hcl
 **/.DS_Store
+
+
+04-analytics-engineering/dbt_service.json
