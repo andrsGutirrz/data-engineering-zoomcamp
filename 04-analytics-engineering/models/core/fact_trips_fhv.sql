@@ -25,6 +25,8 @@ select
     stg_fact_fhv_trips.dispatching_base_num,
     stg_fact_fhv_trips.sr_flag,
     stg_fact_fhv_trips.affiliated_base_number,
+    stg_fact_fhv_trips.pickup_datetime,
+    stg_fact_fhv_trips.drop_off_datetime,
     -- Zone
     pickup_zone.borough as pickup_borough,
     pickup_zone.zone as pickup_zone,
