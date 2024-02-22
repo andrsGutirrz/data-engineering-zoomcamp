@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: staging
+    database: spikes-268805
+    schema: taxi_rides_ny
+    tables:
+      - name: fhv_tripdata_partitoned
+
+models:
+    - name: stg_fact_fhv_trips
+      description: >
+        Trips fhv 
+      columns:
+          - name: dispatching_base_num
+            description: ""
+          - name: pickup_datetime
+            description: ""
+          - name: drop_off_datetime
+            description: ""
+          - name: pu_location_id
+            description: ""
+          - name: do_location_id
+            description: ""
+          - name: sr_flag
+            description: ""
+          - name: affiliated_base_number
+            description: ""

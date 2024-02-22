@@ -1,10 +1,15 @@
-{{ config(materialized='view') }}
+{{ 
+    config(
+        materialized='view',
+        schema='stg_yellow_tripdata',
+    )
+}}
  
 with tripdata as 
 (
   select *,
     row_number() over(partition by vendorid, tpep_pickup_datetime) as rn
-  from {{ source('staging','yellow_tripdata') }}
+  from {{ source('staging','yellow_tripdata_partitoned') }}
   where vendorid is not null 
 )
 select
